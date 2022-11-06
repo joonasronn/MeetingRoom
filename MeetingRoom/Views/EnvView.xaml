@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="MeetingRoom.Views.EnvView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:views="clr-namespace:MeetingRoom.Views"
+      xmlns:viewModels="clr-namespace:MeetingRoom.ViewModels"
+      mc:Ignorable="d">
+    <UserControl.DataContext>
+        <viewModels:EnvViewModel/>
+    </UserControl.DataContext>
+    <StackPanel>
+        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <Button Command="{Binding EstablishDBConnection}" Content="Connect to DB" HorizontalContentAlignment="Center" Width="200">
+                <Button.ToolTip>
+                    <TextBlock>You might need to alter the connection string</TextBlock>
+                </Button.ToolTip>
+            </Button>
+            <TextBox Text="{Binding ConnStringText, Mode=TwoWay}" Width="400" TextChanged="TextBox_TextChanged"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Command="{Binding ReadXML}" Content="Insert Rooms to DB from XML" HorizontalContentAlignment="Center" Width="200">
+                <Button.ToolTip>
+                    <TextBlock>Connect to DB first. Empty path opens file explorer.</TextBlock>
+                </Button.ToolTip>
+            </Button>
+            <TextBox Text="{Binding XMLPathText}" Width="400" IsEnabled="False"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
