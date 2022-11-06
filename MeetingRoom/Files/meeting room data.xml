@@ -1,0 +1,7 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<meeting_rooms>
+	<meeting_room name="Iso neukkari" seats="20" location="Mallikatu 3, 3. krs" />		
+	<meeting_room name="Auditorio" seats="50" location="Mallikatu 1A, pohjakerros" />		
+	<meeting_room name="Pieni neukkari 1" seats="10" location="Mallikatu 3, 5 krs" />		
+	<meeting_room name="Pieni neukkari 2" seats="7" location="Mallikatu 3, 4 krs" />		
+</meeting_rooms>

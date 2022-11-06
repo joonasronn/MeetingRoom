@@ -1,0 +1,5 @@
+How to use:
+Create database (mssql)
+Add connection string to App and Connect
+Add Rooms by reading meeting room data.xml (need to do only once)
+Start adding reservations by clicking timeslots on grid
